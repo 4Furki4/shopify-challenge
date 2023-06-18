@@ -42,13 +42,13 @@
   margin: 0 auto;
   position: relative;
   cursor: pointer;
-  border-radius: var(--border-radius);
+  border-radius: 5px;
   background-color: transparent;
   border: 0;
   font-size: 0.75em;
   border: 2px solid pink;
   font-weight: 600;
-  padding: 0.3em 1em;
+  padding: 0.5em 1em;
   color: pink;
   transition: all 0.2s ease-in-out;
 }
@@ -65,9 +65,9 @@
   transform: scaleX(0);
 }
 .searched-film__nominate-btn::before {
-  transition: all 1s cubic-bezier(0.68, 0.55, 0.265, 1);
+  transition: all 0.5s cubic-bezier(0.68, 0.55, 0.265, 1);
   background-color: purple;
-  border-radius: var(--border-radius);
+  border-radius: 5px;
   content: "";
   left: 0;
   bottom: 0;

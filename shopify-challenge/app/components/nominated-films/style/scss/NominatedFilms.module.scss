@@ -11,10 +11,15 @@
     align-items: center;
     gap: 20px;
 
+
     img {
         width: 500px;
         max-height: 500px;
         object-fit: contain;
+    }
+
+    &__item {
+        position: relative;
     }
 
 }
@@ -31,11 +36,5 @@
 
     .film-title {
         text-align: center;
-
     }
-
-    // .list-item {
-    //     width: 45%;
-    //     // max-height: 500px;
-    // }
 }

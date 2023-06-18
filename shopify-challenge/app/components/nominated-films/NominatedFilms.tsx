@@ -24,7 +24,7 @@ export default function NominatedFilms({ nominatedFilmIds, setNominatedFilmIds }
                 {nominatedFilms.length === 0 && <div>No nominated films</div>}
                 {nominatedFilms.map((film) => (
                     <>
-                        {film.isLoading && <Spinner style={{ marginInline: "auto" }} />}
+                        {film.isLoading && <Spinner color='pink' size={'xl'} style={{ position: "fixed", inset: 0, margin: "auto", transform: "translate(50%, 50%)" }} />}
                         <li key={film.data?.imdbID} className={styles["list-item"]}>
                             <Card>
                                 <CardHeader>{film.data?.Title}</CardHeader>
@@ -39,7 +39,7 @@ export default function NominatedFilms({ nominatedFilmIds, setNominatedFilmIds }
                     </>
                 ))}
             </ul>
-            <Button style={{ width: "100%", marginInline: "auto", marginTop: "1rem" }} disabled={nominatedFilms.length < 5} onClick={() => { }}>
+            <Button style={{ width: "100%", marginTop: "1rem" }} disabled={nominatedFilms.length < 5} onClick={() => { }}>
                 Submit Nominations
             </Button>
         </div>
