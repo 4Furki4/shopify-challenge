@@ -22,9 +22,15 @@
   .list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    align-items: stretch;
   }
   .list div {
     align-items: center;
+  }
+  .list-item > * {
+    align-self: stretch;
+    justify-content: 100%;
+    height: 100%;
   }
   .film-title {
     text-align: center;

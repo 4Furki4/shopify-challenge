@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { searchShow } from '../../methods/films'
 import { useQuery } from '@tanstack/react-query'
 import styles from './style/css/searched-films.module.css'
-import { Spinner, useToast } from '@chakra-ui/react'
+import { Img, Spinner, useToast } from '@chakra-ui/react'
 export default function SearchedFilms({ searchQuery, setNominatedFilmIds, nominatedFilmIds, showType }:
     {
         searchQuery: string,
@@ -30,7 +30,7 @@ export default function SearchedFilms({ searchQuery, setNominatedFilmIds, nomina
         staleTime: 1000 * 60 * 60 * 24 * 7 // 1 week
     })
 
-    if (searchQuery === "") return (<div>Seems You haven't</div>)
+    if (searchQuery === "") return (<div>{"Seems You haven't"}</div>)
 
     if (isLoading) return <Spinner style={{ position: 'absolute', top: "200%", left: "50%" }} />
 
@@ -53,7 +53,7 @@ export default function SearchedFilms({ searchQuery, setNominatedFilmIds, nomina
 
                             <div className={styles["searched-film"]}>
 
-                                <img className={styles["searched-film__poster"]} src={film.Poster} alt="" />
+                                <Img className={styles["searched-film__poster"]} src={film.Poster} alt="" />
 
                                 <div className={styles["searched-film__body"]}>
 
