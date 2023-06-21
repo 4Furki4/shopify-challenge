@@ -12,9 +12,11 @@ export default function ShowSearch({ nominatedShowIds, setNominatedShowIds }:
     const [searchQuery, setSearchQuery] = useState('')
     const [queryType, setQueryType] = useState<'movie' | 'series' | 'episode'>('movie')
     return (
-        <div className={styles.container}>
-            <SearchBar queryType={queryType} setQueryType={setQueryType} searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-            <SearchedShows showType={queryType} nominatedShowIds={nominatedShowIds} setNominatedShowIds={setNominatedShowIds} searchQuery={searchQuery} />
+        <div className={styles.wrapper}>
+            <div className={styles.container}>
+                <SearchBar queryType={queryType} setQueryType={setQueryType} searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+                <SearchedShows showType={queryType} nominatedShowIds={nominatedShowIds} setNominatedShowIds={setNominatedShowIds} searchQuery={searchQuery} />
+            </div>
         </div>
     )
 }

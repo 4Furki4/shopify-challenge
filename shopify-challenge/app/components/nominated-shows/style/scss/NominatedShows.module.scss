@@ -1,6 +1,12 @@
+.wrapper {
+    background: #545B77;
+    min-height: 100%;
+}
+
 .container {
     width: 90%;
     margin: 0 auto;
+    padding-block: 2rem;
 }
 
 .list {
@@ -53,8 +59,4 @@
     .film-title {
         text-align: center;
     }
-<<<<<<< HEAD:shopify-challenge/app/components/nominated-films/style/scss/NominatedFilms.module.scss
-=======
-
->>>>>>> nominate-films:shopify-challenge/app/components/nominated-shows/style/scss/NominatedShows.module.scss
 }

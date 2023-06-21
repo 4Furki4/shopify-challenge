@@ -1,3 +1,19 @@
+.searched-shows-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+
+  &-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
 @mixin button-bg-slide($left,
   $width,
   $height,
@@ -17,22 +33,6 @@
   transform-origin: $transform-origin;
   z-index: -1;
   opacity: 0.05;
-}
-
-.searched-shows-list {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  margin-top: 20px;
-
-  &-item {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
 }
 
 .searched-show {
@@ -60,51 +60,5 @@
   &__content {
     margin-bottom: auto;
     text-align: center;
-  }
-
-  &__nominate-btn {
-    width: 50%;
-    margin: 0 auto;
-    position: relative;
-    cursor: pointer;
-    border-radius: 5px;
-    background-color: transparent;
-    border: 0;
-    font-size: 0.75em;
-    border: 2px solid pink;
-    font-weight: 600;
-    padding: 0.5em 1em;
-    color: pink;
-    transition: all 0.2s ease-in-out;
-
-    &:disabled {
-      background-color: pink;
-      color: white;
-    }
-
-    &:hover,
-    &:focus {
-      &::before {
-        opacity: 1;
-        transform: scaleX(1);
-      }
-    }
-
-    &:active {
-
-      &::before {
-        transition: transform 0.1s ease-in-out;
-        transform: scaleX(0);
-      }
-    }
-
-    &::before {
-      @include button-bg-slide(0,
-        calc(100%),
-        100%,
-        5px,
-        left,
-        purple);
-    }
   }
 }

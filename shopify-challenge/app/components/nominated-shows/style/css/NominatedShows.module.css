@@ -1,6 +1,12 @@
+.wrapper {
+  background: #545B77;
+  min-height: 100%;
+}
+
 .container {
   width: 90%;
   margin: 0 auto;
+  padding-block: 2rem;
 }
 
 .list {

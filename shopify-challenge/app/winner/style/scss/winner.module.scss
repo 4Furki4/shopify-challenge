@@ -3,7 +3,7 @@
     justify-content: center;
     margin-block: auto;
     width: 95%;
-    margin-inline: auto;
+    margin: auto;
 }
 
 .card__footer {
@@ -26,6 +26,7 @@
 
 @media screen and (min-width: 768px) {
     .card--wrapper {
+
         width: 100%;
     }
 }

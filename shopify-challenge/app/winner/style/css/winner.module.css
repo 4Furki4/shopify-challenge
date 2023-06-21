@@ -3,7 +3,7 @@
   justify-content: center;
   margin-block: auto;
   width: 95%;
-  margin-inline: auto;
+  margin: auto;
 }
 
 .card__footer {

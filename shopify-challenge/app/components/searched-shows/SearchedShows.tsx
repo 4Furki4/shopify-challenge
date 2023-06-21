@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { searchShow } from '../../methods/shows'
 import { useQuery } from '@tanstack/react-query'
 import styles from './style/css/searched-shows.module.css'
-import { Img, Spinner, useToast } from '@chakra-ui/react'
+import { Button, Img, Spinner, useToast } from '@chakra-ui/react'
 export default function SearchedShows({ searchQuery, setNominatedShowIds, nominatedShowIds, showType }:
     {
         searchQuery: string,
@@ -30,7 +30,7 @@ export default function SearchedShows({ searchQuery, setNominatedShowIds, nomina
         staleTime: 1000 * 60 * 60 * 24 * 7 // 1 week
     })
 
-    if (searchQuery === "") return (<div>{"Seems You Haven't Searched any Shows"}</div>)
+    if (searchQuery === "") return (<div style={{ marginTop: ".75rem", textAlign: "center" }}>{"Seems You Haven't Searched any Shows"}</div>)
 
     if (isLoading) return <Spinner style={{ position: 'absolute', top: "200%", left: "50%" }} />
 
@@ -69,12 +69,18 @@ export default function SearchedShows({ searchQuery, setNominatedShowIds, nomina
 
                                     </div>
 
-                                    <button disabled={
-                                        nominatedShowIds.length >= 5 ||
-                                        nominatedShowIds.includes(show.imdbID)
-                                    } onClick={() => handleNominate(show.imdbID)} className={styles["searched-show__nominate-btn"]}>
+                                    <Button
+                                        bgColor={nominatedShowIds.includes(show.imdbID) ? "red.500" : "#374259"}
+                                        _hover={{
+                                            bgColor: "#545B77"
+                                        }}
+                                        color={"white"}
+                                        disabled={
+                                            nominatedShowIds.length >= 5 ||
+                                            nominatedShowIds.includes(show.imdbID)
+                                        } onClick={() => handleNominate(show.imdbID)} className={styles["searched-show__nominate-btn"]}>
                                         Nominate
-                                    </button>
+                                    </Button>
                                 </div>
 
                             </div>

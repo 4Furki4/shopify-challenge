@@ -1,7 +1,5 @@
 'use client'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import Footer from './components/footer/Footer'
-import Navbar from './components/navbar/Navbar'
 import ChackraProviders from './ChackraProviders'
 import './globals.css'
 import { Inter } from 'next/font/google'
@@ -28,9 +26,7 @@ export default function RootLayout({
         <ColorModeScript initialColorMode={theme.config.initialColorMode} />
         <ChackraProviders>
           <QueryClientProvider client={queryClient}>
-            <Navbar />
             {children}
-            <Footer />
             <ReactQueryDevtools initialIsOpen={false} />
           </QueryClientProvider>
         </ChackraProviders>
