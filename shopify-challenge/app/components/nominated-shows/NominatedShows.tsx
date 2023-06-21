@@ -1,7 +1,7 @@
 import { getShowDetails } from '@/app/methods/shows'
 import { useQueries } from '@tanstack/react-query'
 import React from 'react'
-import { Card, CardHeader, CardBody, CardFooter, Button, Progress, Spinner } from '@chakra-ui/react'
+import { Card, CardHeader, CardBody, CardFooter, Button, Progress, Spinner, Text } from '@chakra-ui/react'
 import styles from './style/css/NominatedShows.module.css'
 import { Image } from '@chakra-ui/react'
 import { useRouter } from 'next/navigation'
@@ -27,8 +27,9 @@ export default function NominatedFilms({ nominatedShowIds, setNominatedShowIds }
     return (
         <div className={styles.wrapper}>
             <div className={styles.container}>
-                <Progress size={'lg'} borderRadius={'2xl'} hasStripe value={nominatedShows.length * 20} />
-                <p>Nominated Shows <span>{nominatedShowIds.length} / 5</span></p>
+                <Progress display={nominatedShows.length !== 0 ? 'block' : 'none'} size={'lg'} borderRadius={'2xl'} hasStripe value={nominatedShows.length * 20} />
+
+                <Text display={nominatedShows.length !== 0 ? 'block' : 'none'}>Nominated Shows <span>{nominatedShowIds.length} / 5</span></Text>
 
                 <ul className={styles.list}>
                     {nominatedShows.length === 0 && <div>No nominated shows</div>}
