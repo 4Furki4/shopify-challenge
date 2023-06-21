@@ -28,14 +28,11 @@ export default function Winner({ searchParams }: any) {
                 </CardHeader>
                 <CardBody>
                     <Image src={data?.Poster} alt={data?.Title} borderRadius='lg' w={"xs"} marginInline={"auto"} />
-                    <Stack mt='6' spacing='3'>
+                    <Stack mt='6' spacing='3' px={2}>
                         <Heading textAlign={"center"} size='lg'>{data?.Title}</Heading>
                         <Text>
-                            This sofa is perfect for modern tropical spaces, baroque inspired
-                            spaces, earthy toned spaces and for people who love a chic design with a
-                            sprinkle of vintage design.
+                            {data?.Plot}
                         </Text>
-                        {/* add show rating below */}
                     </Stack>
                 </CardBody>
                 <CardFooter className={styles["card__footer"]}>
