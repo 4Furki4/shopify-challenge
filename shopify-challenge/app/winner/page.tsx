@@ -13,12 +13,6 @@ export default function Winner({ searchParams }: any) {
         queryKey: ['showDetails', searchParams.winnerShowId],
         queryFn: () => getShowDetails(searchParams.winnerShowId),
     })
-    if (isLoading) return (<div className={styles.loading}>
-        <Spinner className={styles.loading}
-            size={"xl"}
-        />
-    </div>)
-
     if (isError) return <div>Error</div>
     return (
         <div className={styles["card--wrapper"]}>
