@@ -24,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.className} style={{ minHeight: "100dvh", display: "flex", flexDirection: "column" }}>
         <ColorModeScript initialColorMode={theme.config.initialColorMode} />
         <ChackraProviders>
           <QueryClientProvider client={queryClient}>

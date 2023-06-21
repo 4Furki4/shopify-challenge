@@ -1,0 +1,1 @@
+{"version":3,"sources":["../scss/winner.module.scss","winner.module.css"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,uBAAA;EACA,kBAAA;EACA,UAAA;EACA,mBAAA;ACCJ;;ADEA;EACI,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;ACCJ;ADCI;EACI,mBAAA;ACCR;;ADGA;EACI,kBAAA;EACA,QAAA;EACA,SAAA;EACA,gCAAA;ACAJ;;ADGA;EACI;IACI,WAAA;ECAN;AACF","file":"winner.module.css"}

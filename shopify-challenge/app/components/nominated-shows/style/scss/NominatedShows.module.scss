@@ -19,6 +19,13 @@
 
 }
 
+.nominate__button {
+    &:disabled {
+        background-color: #e0e0e0;
+        color: #9e9e9e;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .list {
         display: grid;
@@ -43,8 +50,4 @@
 
     }
 
-    // .list-item {
-    //     width: 45%;
-    //     // max-height: 500px;
-    // }
 }

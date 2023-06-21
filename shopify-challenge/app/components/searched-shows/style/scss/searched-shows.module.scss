@@ -19,7 +19,7 @@
   opacity: 0.05;
 }
 
-.searched-films-list {
+.searched-shows-list {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -35,7 +35,7 @@
   }
 }
 
-.searched-film {
+.searched-show {
   width: min(100%, 800px);
   display: flex;
 
