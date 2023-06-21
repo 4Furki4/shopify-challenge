@@ -24,17 +24,37 @@
 
 }
 
+.nominate__button {
+    &:disabled {
+        background-color: #e0e0e0;
+        color: #9e9e9e;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .list {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+        align-items: stretch;
 
         & div {
             align-items: center;
         }
+
+        &-item>* {
+            align-self: stretch;
+            justify-content: 100%;
+            height: 100%;
+        }
     }
+
+
 
     .film-title {
         text-align: center;
     }
+<<<<<<< HEAD:shopify-challenge/app/components/nominated-films/style/scss/NominatedFilms.module.scss
+=======
+
+>>>>>>> nominate-films:shopify-challenge/app/components/nominated-shows/style/scss/NominatedShows.module.scss
 }
