@@ -1,0 +1,39 @@
+.searched-shows-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+.searched-shows-list-item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.searched-show {
+  width: min(100%, 800px);
+  display: flex;
+}
+.searched-show__poster {
+  width: 100px;
+  height: 150px;
+  margin-right: 10px;
+}
+.searched-show__poster img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.searched-show__body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.searched-show__content {
+  margin-bottom: auto;
+  text-align: center;
+}/*# sourceMappingURL=searched-shows.module.css.map */

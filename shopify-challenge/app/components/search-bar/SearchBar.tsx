@@ -10,7 +10,7 @@ export default function SearchBar({ searchQuery, setSearchQuery, queryType, setQ
     return (
         <form action="" className={styles["search-form"]}>
             <Input
-                variant={'flushed'}
+                variant={'filled'}
                 className={styles["search-form__input"]}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}

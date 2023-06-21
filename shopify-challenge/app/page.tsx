@@ -1,20 +1,20 @@
 'use client'
 import { useState } from "react";
-import FilmSearch from "./components/film-search/FilmSearch";
-import NominatedFilms from "./components/nominated-films/NominatedFilms";
+import FilmSearch from "./components/film-search/ShowSearch";
+import NominatedShows from "./components/nominated-shows/NominatedShows";
 import styles from './style/css/style.module.css'
 
 export default function Home() {
-  const [nominatedFilmIds, setNominatedFilmIds] = useState(Array<string>)
+  const [nominatedShowIds, setNominatedShowIds] = useState(Array<string>)
   return (
     <main className={styles.main}>
 
       <section className={styles["film-search"]}>
-        <FilmSearch nominatedFilmIds={nominatedFilmIds} setNominatedFilmIds={setNominatedFilmIds} />
+        <FilmSearch nominatedShowIds={nominatedShowIds} setNominatedShowIds={setNominatedShowIds} />
       </section>
 
       <section className={styles.section}>
-        <NominatedFilms nominatedFilmIds={nominatedFilmIds} setNominatedFilmIds={setNominatedFilmIds} />
+        <NominatedShows nominatedShowIds={nominatedShowIds} setNominatedShowIds={setNominatedShowIds} />
       </section>
 
     </main>

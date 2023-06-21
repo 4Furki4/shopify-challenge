@@ -1,0 +1,12 @@
+.container {
+  width: min(90%, 1200px);
+  margin: 0 auto;
+  position: relative;
+  padding-block: 2rem;
+}
+
+.wrapper {
+  background-color: var(--search-bar-bg);
+  min-height: 100%;
+  color: var(--nominated-films-bg);
+}

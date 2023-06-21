@@ -1,6 +1,12 @@
+.wrapper {
+  background: #545B77;
+  min-height: 100%;
+}
+
 .container {
   width: 90%;
   margin: 0 auto;
+  padding-block: 2rem;
 }
 
 .list {
@@ -21,15 +27,26 @@
   position: relative;
 }
 
+.nominate__button:disabled {
+  background-color: #e0e0e0;
+  color: #9e9e9e;
+}
+
 @media screen and (min-width: 768px) {
   .list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    align-items: stretch;
   }
   .list div {
     align-items: center;
   }
+  .list-item > * {
+    align-self: stretch;
+    justify-content: 100%;
+    height: 100%;
+  }
   .film-title {
     text-align: center;
   }
-}/*# sourceMappingURL=NominatedFilms.module.css.map */
+}/*# sourceMappingURL=NominatedShows.module.css.map */
